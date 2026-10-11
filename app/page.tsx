@@ -52,6 +52,7 @@ const phone = '+919823028110'
 const languages = { en: 'English', hi: 'हिन्दी', mr: 'मराठी' } as const
 type Language = keyof typeof languages
 const copy = {
+<<<<<<< HEAD
   en: { services: 'Services', about: 'About', diagnose: 'Diagnose', why: 'Why Amba', gallery: 'Gallery', contact: 'Contact', call: 'Call now', heroLabel: 'Auto care, done right', heroTitle: 'Complete care.', heroTitleAccent: 'For your car.', heroText: 'Expert servicing, repairing, denting and painting for every drive in Amravati.', book: 'Book via WhatsApp', explore: 'Explore services', proof: 'Proof you can', proofAccent: 'count on.', proofText: 'Every job is backed by hands-on experience, careful inspection and a commitment to doing the work right the first time.', bookService: 'Book a service', ask: 'Ask on WhatsApp', vehicles: 'Vehicles serviced', issues: 'Issues resolved', models: 'Car models serviced', years: 'Years experience', what: 'What we do', one: 'One workshop.', every: 'Every solution.', aboutLabel: 'Meet the founder', meet: 'Meet us for your next service' },
   hi: { services: 'सेवाएँ', about: 'हमारे बारे में', diagnose: 'जाँच', why: 'अम्बा क्यों', gallery: 'गैलरी', contact: 'संपर्क', call: 'कॉल करें', heroLabel: 'सही कार देखभाल', heroTitle: 'पूरी देखभाल।', heroTitleAccent: 'आपकी कार के लिए।', heroText: 'अमरावती में हर कार के लिए विशेषज्ञ सर्विसिंग, रिपेयरिंग, डेंटिंग और पेंटिंग।', book: 'व्हाट्सऐप पर बुक करें', explore: 'सेवाएँ देखें', proof: 'भरोसे का', proofAccent: 'प्रमाण।', proofText: 'हर काम अनुभव, सावधानी से जाँच और पहली बार में सही काम करने की प्रतिबद्धता के साथ किया जाता है।', bookService: 'सर्विस बुक करें', ask: 'व्हाट्सऐप पूछें', vehicles: 'सर्विस की गई कारें', issues: 'हल की गई समस्याएँ', models: 'सर्विस किए गए मॉडल', years: 'वर्षों का अनुभव', what: 'हम क्या करते हैं', one: 'एक वर्कशॉप।', every: 'हर समाधान।', aboutLabel: 'संस्थापक से मिलिए', meet: 'अगली सर्विस के लिए मिलिए' },
   mr: { services: 'सेवा', about: 'आमच्याबद्दल', diagnose: 'तपासणी', why: 'अम्बा का?', gallery: 'गॅलरी', contact: 'संपर्क', call: 'कॉल करा', heroLabel: 'योग्य कार काळजी', heroTitle: 'पूर्ण काळजी.', heroTitleAccent: 'तुमच्या कारसाठी.', heroText: 'अमरावतीमध्ये प्रत्येक कारसाठी तज्ज्ञ सर्व्हिसिंग, रिपेअरिंग, डेंटिंग आणि पेंटिंग.', book: 'व्हॉट्सॲपवर बुक करा', explore: 'सेवा पहा', proof: 'विश्वासाचा', proofAccent: 'पुरावा.', proofText: 'प्रत्येक काम अनुभव, काळजीपूर्वक तपासणी आणि पहिल्याच वेळी योग्य काम करण्याच्या वचनबद्धतेने केले जाते.', bookService: 'सेवा बुक करा', ask: 'व्हॉट्सॲप विचारा', vehicles: 'सर्व्हिस केलेल्या कार', issues: 'सोडवलेल्या समस्या', models: 'सर्व्हिस केलेले मॉडेल', years: 'वर्षांचा अनुभव', what: 'आम्ही काय करतो', one: 'एक वर्कशॉप.', every: 'प्रत्येक उपाय.', aboutLabel: 'संस्थापकाला भेटा', meet: 'पुढील सर्व्हिससाठी भेटा' },
@@ -62,6 +63,18 @@ const siteTranslations: Record<Exclude<Language, 'en'>, Record<string, string>> 
   },
   mr: {
     'What we do': 'आम्ही काय करतो', 'One workshop.': 'एक वर्कशॉप.', 'Every solution.': 'प्रत्येक उपाय.', 'From a routine check-up to a complete body makeover, our technicians treat your car like it matters.': 'रुटीन तपासणीपासून संपूर्ण बॉडी मेकओव्हरपर्यंत, आमचे तंत्रज्ञ तुमच्या कारची मनापासून काळजी घेतात.', 'Meet the founder': 'संस्थापकाला भेटा', 'Experience behind every repair.': 'प्रत्येक दुरुस्तीमागचा अनुभव.', 'Complete service menu': 'संपूर्ण सेवा यादी', 'Whatever your car needs,': 'तुमच्या कारला जे हवे,', 'we’re ready.': 'त्यासाठी आम्ही तयार.', 'Quick diagnosis': '��लद तपासणी', 'What’s wrong': 'काय समस्या आहे', 'with your car?': 'तुमच्या कारमध्ये?', 'Recommended first step': 'सुचवलेली पहिली पायरी', 'Local car care guide': 'स्थानिक कार केअर मार्गदर्शक', 'Why is my car': 'म��झी कार', 'doing this?': 'असे का करत आहे?', 'Car brand compatibility': 'कार ब्रँड सुसंगतता', 'We work on': 'आम्ही काम करतो', 'your brand.': 'तुमच्या ब्रँडवर.', 'What our customers say': 'आमचे ग्राहक काय म्हणतात', 'Trusted for': 'विश्वासार्ह', 'the right reasons.': 'योग्य कारणांसाठी.', 'Business dashboard': 'व्यवसाय डॅशबोर्ड', 'How we work,': 'आम्ही कसे काम करतो,', 'made visible.': 'ते स्पष्ट दिसते.', 'Emergency / Roadside': 'आपत्कालीन / रोडसाइड', 'Vehicle': 'वाहन', 'breakdown?': 'बंद पडले?', 'The Amba difference': 'अम्बाचा फरक', 'Good work is': 'चांगले काम', 'felt on the road.': 'रस्त्यावर जाणवते.', 'Simple from start to finish': 'सुरुवातीपासून शेवटपर्यंत सोपे', 'Your car is': 'तुमची कार', 'in good hands.': 'योग्य हातात आहे.', 'Proof in the work': 'कामाचा पुरावा', 'Before. Repair.': 'आधी. दुरुस्ती.', 'After.': 'नंतर.', 'Tell us about your car': 'तुमच्या कारबद्दल सांगा', 'Start with': 'सुरुवात करा', 'the details.': 'तपशीलांपासून.', 'Let’s get you moving': 'तुम्हाला पुन्हा रस्त्यावर आणूया', 'Call now': 'आता कॉल करा', 'WhatsApp now': 'आता व्हॉट्सॲप करा', 'Save & enquire on WhatsApp': 'सेव्ह करा आणि व्हॉट्सॲपवर विचारा', 'Talk to our team': 'आमच्या टीमशी बोला', 'Clear communication': 'स्पष्ट संवाद', 'Skilled technicians': 'कुशल तंत्रज्ञ', 'Quality-first process': 'गुणवत्तेला प्राधान्य', 'Support after service': 'सेवेनंतर मदत', '25+ years of experience': '25+ वर्षांचा अनुभव', 'All types of car service': 'सर्व प्रकारची कार सेवा', 'Honest work. Reliable results.': 'प्रामाणिक काम. विश्वासार्ह परिणाम.'
+=======
+  en: { services: 'Services', about: 'About', diagnose: 'Diagnose', why: 'Why Amba', gallery: 'Gallery', contact: 'Contact', call: 'Call now', heroLabel: 'Navratri special · Maa Amba’s blessings', heroTitle: 'Car Service & Repair', heroTitleAccent: 'in Amravati.', heroText: 'Looking for a car garage in Amravati? Amba Motors on Badnera Road offers car servicing, diagnostics, brake and AC repair, wheel alignment, denting and painting.', book: 'Book via WhatsApp', explore: 'Explore services', proof: 'Proof you can', proofAccent: 'count on.', proofText: 'Every job is backed by hands-on experience, careful inspection and a commitment to doing the work right the first time.', bookService: 'Book a service', ask: 'Ask on WhatsApp', vehicles: 'Vehicles serviced', issues: 'Issues resolved', models: 'Car models serviced', years: 'Years experience', what: 'What we do', one: 'One workshop.', every: 'Every solution.', aboutLabel: 'Meet the founder', meet: 'Meet us for your next service' },
+  hi: { services: 'सेवाएँ', about: 'हमारे बारे में', diagnose: 'जाँच', why: 'अम्बा क्यों', gallery: 'गैलरी', contact: 'संपर्क', call: 'कॉल करें', heroLabel: 'नवरात्रि विशेष · माँ अम्बा का आशीर्वाद', heroTitle: 'कार सर्विस और रिपेयर', heroTitleAccent: 'अमरावती में।', heroText: 'अमरावती में कार गैराज ढूँढ़ रहे हैं? अम्बा मोटर्स, बडनेरा रोड पर कार सर्विसिंग, डायग्नोस्टिक्स, ब्रेक और एसी रिपेयर, व्हील अलाइनमेंट, डेंटिंग और पेंटिंग की सुविधा।', book: 'व्हाट्सऐप पर बुक करें', explore: 'सेवाएँ देखें', proof: 'भरोसे का', proofAccent: 'प्रमाण।', proofText: 'हर काम अनुभव, सावधानी से जाँच और पहली बार में सही काम करने की प्रतिबद्धता के साथ किया जाता है।', bookService: 'सर्विस बुक करें', ask: 'व्हाट्सऐप पूछें', vehicles: 'सर्विस की गई कारें', issues: 'हल की गई समस्याएँ', models: 'सर्विस किए गए मॉडल', years: 'वर्षों का अनुभव', what: 'हम क्या करते हैं', one: 'एक वर्कशॉप।', every: 'हर समाधान।', aboutLabel: 'संस्थापक से मिलिए', meet: 'अगली सर्विस के लिए मिलिए' },
+  mr: { services: 'सेवा', about: 'आमच्याबद्दल', diagnose: 'तपासणी', why: 'अम्बा का?', gallery: 'गॅलरी', contact: 'संपर्क', call: 'कॉल करा', heroLabel: 'नवरात्री विशेष · आई अंबेचा आशीर्वाद', heroTitle: 'कार सर्व्हिस आणि रिपेअर', heroTitleAccent: 'अमरावतीमध्ये.', heroText: 'अमरावतीमध्ये कार गॅरेज शोधत आहात? अम्बा मोटर्स, बडनेरा रोड येथे कार सर्व्हिसिंग, डायग्नोस्टिक्स, ब्रेक व एसी रिपेअर, व्हील अलाइनमेंट, डेंटिंग आणि पेंटिंग.', book: 'व्हॉट्सॲपवर बुक करा', explore: 'सेवा पहा', proof: 'विश्वासाचा', proofAccent: 'पुरावा.', proofText: 'प्रत्येक काम अनुभव, काळजीपूर्वक तपासणी आणि पहिल्याच वेळी योग्य काम करण्याच्या वचनबद्धतेने केले जाते.', bookService: 'सेवा बुक करा', ask: 'व्हॉट्सॲप विचारा', vehicles: 'सर्व्हिस केलेल्या कार', issues: 'सोडवलेल्या समस्या', models: 'सर्व्हिस केलेले मॉडेल', years: 'वर्षांचा अनुभव', what: 'आम्ही काय करतो', one: 'एक वर्कशॉप.', every: 'प्रत्येक उपाय.', aboutLabel: 'संस्थापकाला भेटा', meet: 'पुढील सर्व्हिससाठी भेटा' },
+} as const
+const siteTranslations: Record<Exclude<Language, 'en'>, Record<string, string>> = {
+  hi: {
+    'What we do': 'हम क्या करते हैं', 'One workshop.': 'एक वर्कशॉप।', 'Every solution.': 'हर समाधान।', 'From a routine check-up to a complete body makeover, our technicians treat your car like it matters.': 'रूटीन चेक-अप से लेकर पूरी बॉडी मेकओवर तक, हमारे तकनीशियन आपकी कार का ध्यान अपने वाहन जैसा रखते हैं।', 'Meet the founder': 'संस्थापक से मिलिए', 'Experience behind every repair.': 'हर रिपेयर के पीछे अनुभव।', 'Complete service menu': 'पूरी सर्विस सूची', 'Whatever your car needs,': 'आपकी कार को जो चाहिए,', 'we’re ready.': 'हम तैयार हैं।', 'Quick diagnosis': 'त्वरित जाँच', 'What’s wrong': 'क्या समस्या है', 'with your car?': 'आपकी कार में?', 'Recommended first step': 'पहला सुझाया कदम', 'Local car care guide': 'स्थानीय कार केयर गाइड', 'Why is my car': 'मेरी कार', 'doing this?': 'ऐसा क्यों कर रही है?', 'Car brand compatibility': 'कार ब्रांड संगतता', 'We work on': 'हम काम करते हैं', 'your brand.': 'आपके ब्रांड पर।', 'What our customers say': 'हमारे ग्राहक क्या कहते हैं', 'Trusted for': 'भरोसेमंद', 'the right reasons.': 'सही कारणों से।', 'Business dashboard': 'बिज़नेस डैशबोर्ड', 'How we work,': 'हम कैसे काम करते हैं,', 'made visible.': 'वह साफ़ दिखता है।', 'Emergency / Roadside': 'आपातकाल / रोडसाइड', 'Vehicle': 'वाहन', 'breakdown?': 'खराब हो गया?', 'The Amba difference': 'अम्बा का फर्क', 'Good work is': 'अच्छा काम', 'felt on the road.': 'सड़क पर महसूस होता है।', 'Simple from start to finish': 'शुरू से अंत तक आसान', 'Your car is': 'आपकी कार', 'in good hands.': 'सही हाथों में है।', 'Proof in the work': 'काम का प्रमाण', 'Before. Repair.': 'पहले। रिपेयर।', 'After.': 'बाद में।', 'Tell us about your car': 'अपनी कार के बारे में बताएं', 'Start with': 'शुरुआत करें', 'the details.': 'जानकारी से।', 'Let’s get you moving': 'आपको फिर से सड़क पर लाएं', 'Call now': 'अभी कॉल करें', 'WhatsApp now': 'अभी व्हॉट्सऐप करें', 'Save & enquire on WhatsApp': 'सेव करें और व्हॉट्सऐप पर पूछें', 'Talk to our team': 'हमारी टीम से बात करें', 'Clear communication': 'स्पष्ट बातचीत', 'Skilled technicians': 'कुशल तकनीशियन', 'Quality-first process': 'गुणवत्ता वाला काम', 'Support after service': 'सर्विस के बाद सहायता', '25+ years of experience': '25+ वर्षों का अनुभव', 'Car service for all major brands': 'सभी प्रमुख कार ब्रांड की सर्विस', 'Car repair in Amravati': 'अमरावती में कार रिपेयर', 'Honest work. Reliable results.': 'ईमानदार काम। भरोसेमंद परिणाम।'
+  },
+  mr: {
+    'What we do': 'आम्ही काय करतो', 'One workshop.': 'एक वर्कशॉप.', 'Every solution.': 'प्रत्येक उपाय.', 'From a routine check-up to a complete body makeover, our technicians treat your car like it matters.': 'रुटीन तपासणीपासून संपूर्ण बॉडी मेकओव्हरपर्यंत, आमचे तंत्रज्ञ तुमच्या कारची मनापासून काळजी घेतात.', 'Meet the founder': 'संस्थापकाला भेटा', 'Experience behind every repair.': 'प्रत्येक दुरुस्तीमागचा अनुभव.', 'Complete service menu': 'संपूर्ण सेवा यादी', 'Whatever your car needs,': 'तुमच्या कारला जे हवे,', 'we’re ready.': 'त्यासाठी आम्ही तयार.', 'Quick diagnosis': '��लद तपासणी', 'What’s wrong': 'काय समस्या आहे', 'with your car?': 'तुमच्या कारमध्ये?', 'Recommended first step': 'सुचवलेली पहिली पायरी', 'Local car care guide': 'स्थानिक कार केअर मार्गदर्शक', 'Why is my car': 'म��झी कार', 'doing this?': 'असे का करत आहे?', 'Car brand compatibility': 'कार ब्रँड सुसंगतता', 'We work on': 'आम्ही काम करतो', 'your brand.': 'तुमच्या ब्रँडवर.', 'What our customers say': 'आमचे ग्राहक काय म्हणतात', 'Trusted for': 'विश्वासार्ह', 'the right reasons.': 'योग्य कारणांसाठी.', 'Business dashboard': 'व्यवसाय डॅशबोर्ड', 'How we work,': 'आम्ही कसे काम करतो,', 'made visible.': 'ते स्पष्ट दिसते.', 'Emergency / Roadside': 'आपत्कालीन / रोडसाइड', 'Vehicle': 'वाहन', 'breakdown?': 'बंद पडले?', 'The Amba difference': 'अम्बाचा फरक', 'Good work is': 'चांगले काम', 'felt on the road.': 'रस्त्यावर जाणवते.', 'Simple from start to finish': 'सुरुवातीपासून शेवटपर्यंत सोपे', 'Your car is': 'तुमची कार', 'in good hands.': 'योग्य हातात आहे.', 'Proof in the work': 'कामाचा पुरावा', 'Before. Repair.': 'आधी. दुरुस्ती.', 'After.': 'नंतर.', 'Tell us about your car': 'तुमच्या कारबद्दल सांगा', 'Start with': 'सुरुवात करा', 'the details.': 'तपशीलांपासून.', 'Let’s get you moving': 'तुम्हाला पुन्हा रस्त्यावर आणूया', 'Call now': 'आता कॉल करा', 'WhatsApp now': 'आता व्हॉट्सॲप करा', 'Save & enquire on WhatsApp': 'सेव्ह करा आणि व्हॉट्सॲपवर विचारा', 'Talk to our team': 'आमच्या टीमशी बोला', 'Clear communication': 'स्पष्ट संवाद', 'Skilled technicians': 'कुशल तंत्रज्ञ', 'Quality-first process': 'गुणवत्तेला प्राधान्य', 'Support after service': 'सेवेनंतर मदत', '25+ years of experience': '25+ वर्षांचा अनुभव', 'Car service for all major brands': 'सर्व प्रमुख कार ब्रँडची सेवा', 'Car repair in Amravati': 'अमरावतीमध्ये कार रिपेअर', 'Honest work. Reliable results.': 'प्रामाणिक काम. विश्वासार्ह परिणाम.'
+>>>>>>> b8dc656 (Update Navratri theme)
   }
 }
 
@@ -139,6 +152,14 @@ const gallery = [
   { src: assets.feature, alt: 'Amba Motors service bay', label: 'Built for every car' },
   { src: assets.collage, alt: 'Amba Motors technicians and paint booth', label: 'Crafted with care' },
   { src: assets.interior, alt: 'Amba Motors reception and service tools', label: 'A clear process' },
+<<<<<<< HEAD
+=======
+  { src: '/images/amba-navratri-poster.png', alt: 'Amba Motors Navratri poster with Maa Durga, the workshop and safe journey wishes', label: 'Safe rides, happy vibes' },
+  { src: '/images/navratri-ambe-cover.png', alt: 'Colorful festive portrait celebrating Maa Ambe', label: 'Maa Ambe’s blessings' },
+  { src: '/images/happy-navratri-eyes.png', alt: 'Festive Happy Navratri greeting artwork', label: 'Happy Navratri' },
+  { src: '/images/durga-blessings.png', alt: 'Maa Durga blessing devotees for Navratri', label: 'Blessings for every journey' },
+  { src: '/images/navratri-durga-art.png', alt: 'Traditional red and gold Maa Durga artwork', label: 'A season of celebration' },
+>>>>>>> b8dc656 (Update Navratri theme)
 ]
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -225,7 +246,11 @@ export default function Page() {
 
   const t = copy[language]
   useEffect(() => {
+<<<<<<< HEAD
     const timer = window.setTimeout(() => setShowWelcome(false), 1400)
+=======
+    const timer = window.setTimeout(() => setShowWelcome(false), 3600)
+>>>>>>> b8dc656 (Update Navratri theme)
     return () => window.clearTimeout(timer)
   }, [])
 
@@ -396,7 +421,30 @@ export default function Page() {
   return (
     <Localized language={language}>
     <SignatureCursor />
+<<<<<<< HEAD
     {showWelcome && <div className="welcome-splash" role="status" aria-label="Welcome to Amba Motors"><Image className="welcome-splash-logo" src="/amba-motors-logo.png" alt="Amba Motors logo" width={180} height={180} priority /><p>Welcome to</p><h1>Amba <em>Motors</em></h1><span>Dependable care for every road ahead.</span></div>}
+=======
+    {showWelcome && <div className="welcome-splash" role="status" aria-label="Happy Navratri from Amba Motors">
+      <div className="welcome-garland welcome-garland-left" aria-hidden="true">✦ ✧ ✦</div>
+      <div className="welcome-garland welcome-garland-right" aria-hidden="true">✦ ✧ ✦</div>
+      <div className="welcome-scene">
+        <div className="welcome-side-art welcome-side-left">
+          <figure><Image src="/images/navratri-ambe-cover.png" alt="" fill sizes="(max-width: 800px) 24vw, 15vw" /></figure>
+          <figure><Image src="/images/happy-navratri-eyes.png" alt="" fill sizes="(max-width: 800px) 24vw, 15vw" /></figure>
+        </div>
+        <div className="welcome-center">
+          <p className="welcome-kicker">Amba Motors wishes you</p>
+          <h2>Happy <em>Navratri</em></h2>
+          <div className="welcome-poster-frame"><Image src="/images/amba-navratri-poster.png" alt="Maa Durga blesses Amba Motors customers with safe rides and happy vibes this Navratri" fill priority sizes="(max-width: 800px) 60vw, 34vw" /></div>
+          <span className="welcome-blessing">माँ दुर्गा का आशीर्वाद · Blessed journeys ahead</span>
+        </div>
+        <div className="welcome-side-art welcome-side-right">
+          <figure><Image src="/images/durga-blessings.png" alt="" fill sizes="(max-width: 800px) 24vw, 15vw" /></figure>
+          <figure><Image src="/images/navratri-durga-art.png" alt="" fill sizes="(max-width: 800px) 24vw, 15vw" /></figure>
+        </div>
+      </div>
+    </div>}
+>>>>>>> b8dc656 (Update Navratri theme)
     <main>
       <CarDoctor />
       <header className="site-header">
@@ -421,10 +469,25 @@ export default function Page() {
           <div className="hero-actions"><a className="button button-red" href={whatsapp()} target="_blank" rel="noreferrer"><MessageCircle size={18} /> {t.book}</a><a className="text-link" href="#services">{t.explore} <ArrowRight size={16} /></a></div>
           <div className="hero-proof"><span><Star size={15} fill="currentColor" /> 4.6 Google rating</span><span><ShieldCheck size={15} /> All types of cars</span></div>
         </div>
+<<<<<<< HEAD
         <div className="hero-image-wrap"><Image className="hero-image" src={assets.exterior} alt="Amba Motors workshop with cars ready for service" fill priority sizes="(max-width: 800px) 100vw, 55vw" /><div className="image-caption"><span>AMBA MOTORS</span><span>Amravati, Maharashtra</span></div></div>
       </section>
 
       <section className="ticker" aria-label="Amba Motors highlights"><div><span>25+ years of experience</span><span>All types of car service</span><span>No dignity of brokenness</span><span>Honest work. Reliable results.</span></div></section>
+=======
+        <div className="hero-image-wrap" aria-label="Navratri greetings and artwork from Amba Motors">
+          <div className="navratri-photo-grid">
+            <figure className="navratri-photo navratri-photo-cover"><Image src="/images/durga-navratri.png" alt="Maa Durga seated with her lion for Navratri" fill priority sizes="(max-width: 800px) 46vw, 28vw" /><figcaption>Maa Ambe’s grace</figcaption></figure>
+            <figure className="navratri-photo navratri-photo-eyes"><Image src="/images/happy-navratri-eyes.png" alt="Happy Navratri greeting with Maa Durga’s eyes" fill sizes="(max-width: 800px) 46vw, 28vw" /><figcaption>Happy Navratri</figcaption></figure>
+            <figure className="navratri-photo navratri-photo-blessings"><Image src="/images/durga-blessings.png" alt="Maa Durga’s blessing for Navratri" fill sizes="(max-width: 800px) 46vw, 28vw" /><figcaption>Blessings for every journey</figcaption></figure>
+            <figure className="navratri-photo navratri-photo-art"><Image src="/images/amba-navratri-poster.png" alt="Amba Motors Navratri greetings for safe rides and happy vibes" fill sizes="(max-width: 800px) 46vw, 28vw" /><figcaption>Safe rides, happy vibes</figcaption></figure>
+          </div>
+          <div className="image-caption"><span>शुभ नवरात्रि</span><span>Safe journeys, blessed beginnings</span></div>
+        </div>
+      </section>
+
+      <section className="ticker" aria-label="Amba Motors highlights"><div><span>25+ years of experience</span><span>Car service for all major brands</span><span>Car repair in Amravati</span><span>Honest work. Reliable results.</span></div></section>
+>>>>>>> b8dc656 (Update Navratri theme)
 
       <section className="trust-metrics" ref={metricsRef} aria-label="Amba Motors experience statistics"><div className="trust-metrics-intro"><SectionLabel>{t.proof}</SectionLabel><h2>{t.proof}<br /><span>{t.proofAccent}</span></h2><p>{t.proofText}</p><div className="trust-metrics-actions"><a className="button button-red" href="#contact"><Phone size={17} /> {t.bookService}</a><a className="text-link" href={whatsapp()} target="_blank" rel="noreferrer">{t.ask} <ArrowRight size={16} /></a></div></div><div className="metrics-grid">{[[metricValues[0], '+', t.vehicles], [metricValues[1], '+', t.issues], [metricValues[2], '+', t.models], [metricValues[3], '+', t.years]].map(([value, suffix, label]) => <div className="metric-card" key={label}><strong>{value.toLocaleString()}<em>{suffix}</em></strong><span>{label}</span></div>)}</div></section>
 
