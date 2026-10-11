@@ -1,0 +1,282 @@
+# 🚗 Amba Motors — Smart Automotive Service Platform
+## 🚘 About Amba Motors
+
+**Amba Motors** is an automobile servicing and repair garage founded by **Pravin Kuntare**, a Mechanical Engineer with **25+ years of experience** in the automotive/mechanical field.
+
+The platform is designed to provide customers with a modern digital experience for:
+
+- Car servicing
+- Vehicle repairs
+- Diagnostics
+- Maintenance
+- Customer enquiries
+- Service booking
+- Vehicle problem assistance
+- Garage information
+- Location and navigation
+- Customer reviews
+- WhatsApp communication
+
+The website is designed with a **mobile-first approach**, making it fast and easy to use for customers searching for car services from their phones.
+
+---
+
+# ✨ Key Features
+
+## 🏠 Modern Homepage
+
+A premium automotive landing page featuring:
+
+- Strong hero section
+- Clear service CTAs
+- Trust indicators
+- Customer statistics
+- Car brand showcase
+- Customer reviews
+- Workshop gallery
+- Founder section
+- Location
+- Contact information
+- WhatsApp integration
+
+---
+
+## 🔧 Automotive Services
+
+Customers can explore available services such as:
+
+- Periodic Car Service
+- Engine Diagnostics
+- Engine Repair
+- Brake Inspection & Repair
+- Clutch Service
+- Transmission Inspection
+- AC Service & Repair
+- Battery Inspection
+- Auto Electrical Diagnostics
+- Suspension Inspection & Repair
+- Steering Inspection
+- Tyre Services
+- Wheel Alignment
+- Wheel Balancing
+- Oil & Filter Service
+- Cooling System Inspection
+- General Vehicle Inspection
+
+> Services displayed on the website should reflect the actual services offered by Amba Motors.
+
+---
+
+# 🤖 Amba Motors Car Doctor
+
+One of the main features of the platform is the **Amba Motors Car Doctor**.
+
+The Car Doctor is an AI-powered automotive assistant designed to help customers understand vehicle problems and decide what to do next.
+
+### It can help with:
+
+- 🚗 Car won't start
+- 🚨 Dashboard warning lights
+- 🔋 Battery problems
+- 🛑 Brake problems
+- ❄️ AC problems
+- 🌡️ Engine overheating
+- 🔊 Unusual sounds
+- 🛞 Tyre problems
+- ⚙️ Transmission issues
+- 🔧 Engine problems
+- ⚡ Electrical problems
+- 🚘 Steering problems
+- 📳 Vehicle vibration
+- 🛢️ Oil leaks
+- 💧 Coolant leaks
+- ⛽ Fuel-related concerns
+- 🔧 General maintenance
+
+---
+
+# 📷 Multimodal Car Doctor
+
+Customers can provide different types of information.
+
+### 📸 Images
+
+Customers can upload:
+
+- Dashboard warning lights
+- Engine bay photos
+- Tyre damage
+- Fluid leaks
+- Vehicle damage
+- Parts
+- Electrical components
+
+The AI analyzes visible information and provides possible explanations.
+
+---
+
+### 🎥 Videos
+
+Customers can upload videos showing:
+
+- Engine sounds
+- Vehicle vibration
+- Wheel movement
+- Smoke
+- Leaks
+- Dashboard behavior
+- Strange mechanical noises
+
+---
+
+### 🎙️ Audio
+
+Customers can upload vehicle sounds.
+
+The system can help classify sounds such as:
+
+- Clicking
+- Knocking
+- Grinding
+- Squealing
+- Rattling
+- Whining
+- Hissing
+- Clunking
+- Scraping
+- Humming
+
+---
+
+# 🧠 AI Safety Architecture
+
+The Car Doctor is designed as a **troubleshooting and triage assistant**, not a replacement for a professional mechanic.
+
+The AI:
+
+- Does not claim definitive remote diagnoses
+- Identifies possible causes
+- Asks relevant follow-up questions
+- Provides safety warnings
+- Recommends appropriate inspections
+- Connects customers with Amba Motors
+
+### Safety Levels
+
+🔴 **Emergency**
+
+Stop using the vehicle and seek professional assistance.
+
+🟠 **High Priority**
+
+Arrange professional inspection as soon as possible.
+
+🟡 **Service Soon**
+
+Schedule an inspection.
+
+🟢 **Routine**
+
+Normal maintenance or monitoring.
+
+---
+
+# 👨‍🔧 About the Founder
+
+## Pravin Kuntare
+
+**Founder & Mechanical Engineer**
+
+Pravin Kuntare is the founder of Amba Motors and has **25+ years of experience** in the automotive/mechanical field.
+
+His experience forms the foundation of the workshop's focus on:
+
+- Honest communication
+- Proper workmanship
+- Vehicle maintenance
+- Customer satisfaction
+- Reliable automotive service
+
+---
+
+# 📊 Trust & Experience
+
+The website can showcase verified business achievements such as:
+
+### 5,000+
+Happy Customers
+
+### 10,000+
+Issues Resolved
+
+### 100+
+Car Models
+
+### 25+
+Years Experience
+
+> Business statistics should only be displayed after verification by the business owner.
+
+---
+
+# 🚘 Vehicle Brands
+
+The platform can showcase supported vehicle manufacturers and models.
+
+Example brands:
+
+- Maruti Suzuki
+- Hyundai
+- Tata Motors
+- Mahindra
+- Toyota
+- Honda
+- Kia
+- Renault
+- Nissan
+- Volkswagen
+- Škoda
+- MG
+- Jeep
+- BMW
+- Mercedes-Benz
+- Audi
+- Jaguar
+- Volvo
+- Lexus
+- Land Rover
+- Porsche
+
+> Brand/model availability should be based on the actual workshop capabilities.
+
+---
+
+# ⭐ Customer Reviews
+
+The website includes a customer review section using genuine customer feedback.
+
+Example:
+
+> "Really good experience at Amba Motors. The service was professional, the work was done properly, and the staff was helpful and polite."
+
+The platform should never generate or fabricate customer reviews.
+
+---
+
+# 📍 Garage Location
+
+Customers can:
+
+- View the garage location
+- Open Google Maps
+- Get directions
+- Contact the garage
+- Send a WhatsApp enquiry
+
+### Primary CTAs
+
+```text
+📞 Call Amba Motors
+💬 WhatsApp
+📍 Get Directions
+🔧 Book Service
