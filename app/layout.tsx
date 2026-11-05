@@ -80,10 +80,8 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/amba-navratri-poster.png',
-        width: 768,
-        height: 1152,
-        alt: 'Amba Motors wishes you safe rides and happy vibes this Navratri',
+        url: '/amba-motors-logo.png',
+        alt: 'Amba Motors, car servicing and repair in Amravati',
       },
     ],
   },
@@ -93,7 +91,7 @@ export const metadata: Metadata = {
     title: 'Amba Motors | Car Service & Repair in Amravati',
     description:
       'Car servicing, diagnostics and repairs on Badnera Road, Amravati. Call Amba Motors to enquire or book.',
-    images: ['/images/amba-navratri-poster.png'],
+    images: ['/amba-motors-logo.png'],
   },
 }
 
@@ -106,7 +104,7 @@ const businessJsonLd = {
   alternateName: 'Amba Motors Amravati',
   url: 'https://ambamotors.in/',
   image: [
-    'https://ambamotors.in/images/amba-navratri-poster.png',
+    'https://ambamotors.in/amba-motors-logo.png',
     'https://ambamotors.in/amba-motors-logo.png',
   ],
   logo: 'https://ambamotors.in/amba-motors-logo.png',
@@ -189,7 +187,7 @@ const jsonLd = {
       about: { '@id': 'https://ambamotors.in/#auto-repair' },
       primaryImageOfPage: {
         '@type': 'ImageObject',
-        url: 'https://ambamotors.in/images/amba-navratri-poster.png',
+        url: 'https://ambamotors.in/amba-motors-logo.png',
       },
       inLanguage: 'en-IN',
     },

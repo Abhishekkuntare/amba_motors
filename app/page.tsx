@@ -4,6 +4,7 @@ import { cloneElement, isValidElement, useEffect, useRef, useState, type ReactNo
 import Image from 'next/image'
 import { jsPDF } from 'jspdf'
 import { CarDoctor } from '@/components/car-doctor'
+import { celebrateDiwali, DiwaliAtmosphere } from '@/components/diwali-atmosphere'
 import {
   ArrowRight,
   Asterisk,
@@ -52,9 +53,9 @@ const phone = '+919823028110'
 const languages = { en: 'English', hi: 'हिन्दी', mr: 'मराठी' } as const
 type Language = keyof typeof languages
 const copy = {
-  en: { services: 'Services', about: 'About', diagnose: 'Diagnose', why: 'Why Amba', gallery: 'Gallery', contact: 'Contact', call: 'Call now', heroLabel: 'Navratri special · Maa Amba’s blessings', heroTitle: 'Car Service & Repair', heroTitleAccent: 'in Amravati.', heroText: 'Looking for a car garage in Amravati? Amba Motors on Badnera Road offers car servicing, diagnostics, brake and AC repair, wheel alignment, denting and painting.', book: 'Book via WhatsApp', explore: 'Explore services', proof: 'Proof you can', proofAccent: 'count on.', proofText: 'Every job is backed by hands-on experience, careful inspection and a commitment to doing the work right the first time.', bookService: 'Book a service', ask: 'Ask on WhatsApp', vehicles: 'Vehicles serviced', issues: 'Issues resolved', models: 'Car models serviced', years: 'Years experience', what: 'What we do', one: 'One workshop.', every: 'Every solution.', aboutLabel: 'Meet the founder', meet: 'Meet us for your next service' },
-  hi: { services: 'सेवाएँ', about: 'हमारे बारे में', diagnose: 'जाँच', why: 'अम्बा क्यों', gallery: 'गैलरी', contact: 'संपर्क', call: 'कॉल करें', heroLabel: 'नवरात्रि विशेष · माँ अम्बा का आशीर्वाद', heroTitle: 'कार सर्विस और रिपेयर', heroTitleAccent: 'अमरावती में।', heroText: 'अमरावती में कार गैराज ढूँढ़ रहे हैं? अम्बा मोटर्स, बडनेरा रोड पर कार सर्विसिंग, डायग्नोस्टिक्स, ब्रेक और एसी रिपेयर, व्हील अलाइनमेंट, डेंटिंग और पेंटिंग की सुविधा।', book: 'व्हाट्सऐप पर बुक करें', explore: 'सेवाएँ देखें', proof: 'भरोसे का', proofAccent: 'प्रमाण।', proofText: 'हर काम अनुभव, सावधानी से जाँच और पहली बार में सही काम करने की प्रतिबद्धता के साथ किया जाता है।', bookService: 'सर्विस बुक करें', ask: 'व्हाट्सऐप पूछें', vehicles: 'सर्विस की गई कारें', issues: 'हल की गई समस्याएँ', models: 'सर्विस किए गए मॉडल', years: 'वर्षों का अनुभव', what: 'हम क्या करते हैं', one: 'एक वर्कशॉप।', every: 'हर समाधान।', aboutLabel: 'संस्थापक से मिलिए', meet: 'अगली सर्विस के लिए मिलिए' },
-  mr: { services: 'सेवा', about: 'आमच्याबद्दल', diagnose: 'तपासणी', why: 'अम्बा का?', gallery: 'गॅलरी', contact: 'संपर्क', call: 'कॉल करा', heroLabel: 'नवरात्री विशेष · आई अंबेचा आशीर्वाद', heroTitle: 'कार सर्व्हिस आणि रिपेअर', heroTitleAccent: 'अमरावतीमध्ये.', heroText: 'अमरावतीमध्ये कार गॅरेज शोधत आहात? अम्बा मोटर्स, बडनेरा रोड येथे कार सर्व्हिसिंग, डायग्नोस्टिक्स, ब्रेक व एसी रिपेअर, व्हील अलाइनमेंट, डेंटिंग आणि पेंटिंग.', book: 'व्हॉट्सॲपवर बुक करा', explore: 'सेवा पहा', proof: 'विश्वासाचा', proofAccent: 'पुरावा.', proofText: 'प्रत्येक काम अनुभव, काळजीपूर्वक तपासणी आणि पहिल्याच वेळी योग्य काम करण्याच्या वचनबद्धतेने केले जाते.', bookService: 'सेवा बुक करा', ask: 'व्हॉट्सॲप विचारा', vehicles: 'सर्व्हिस केलेल्या कार', issues: 'सोडवलेल्या समस्या', models: 'सर्व्हिस केलेले मॉडेल', years: 'वर्षांचा अनुभव', what: 'आम्ही काय करतो', one: 'एक वर्कशॉप.', every: 'प्रत्येक उपाय.', aboutLabel: 'संस्थापकाला भेटा', meet: 'पुढील सर्व्हिससाठी भेटा' },
+  en: { services: 'Services', about: 'About', diagnose: 'Diagnose', why: 'Why Amba', gallery: 'Gallery', contact: 'Contact', call: 'Call now', heroLabel: 'Diwali special · A brighter journey ahead', heroTitle: 'Car Service & Repair', heroTitleAccent: 'in Amravati.', heroText: 'Looking for a car garage in Amravati? Amba Motors on Badnera Road offers car servicing, diagnostics, brake and AC repair, wheel alignment, denting and painting.', book: 'Book via WhatsApp', explore: 'Explore services', proof: 'Proof you can', proofAccent: 'count on.', proofText: 'Every job is backed by hands-on experience, careful inspection and a commitment to doing the work right the first time.', bookService: 'Book a service', ask: 'Ask on WhatsApp', vehicles: 'Vehicles serviced', issues: 'Issues resolved', models: 'Car models serviced', years: 'Years experience', what: 'What we do', one: 'One workshop.', every: 'Every solution.', aboutLabel: 'Meet the founder', meet: 'Meet us for your next service' },
+  hi: { services: 'सेवाएँ', about: 'हमारे बारे में', diagnose: 'जाँच', why: 'अम्बा क्यों', gallery: 'गैलरी', contact: 'संपर्क', call: 'कॉल करें', heroLabel: 'दिवाली विशेष · रोशन हो आपका सफ़र', heroTitle: 'कार सर्विस और रिपेयर', heroTitleAccent: 'अमरावती में।', heroText: 'अमरावती में कार गैराज ढूँढ़ रहे हैं? अम्बा मोटर्स, बडनेरा रोड पर कार सर्विसिंग, डायग्नोस्टिक्स, ब्रेक और एसी रिपेयर, व्हील अलाइनमेंट, डेंटिंग और पेंटिंग की सुविधा।', book: 'व्हाट्सऐप पर बुक करें', explore: 'सेवाएँ देखें', proof: 'भरोसे का', proofAccent: 'प्रमाण।', proofText: 'हर काम अनुभव, सावधानी से जाँच और पहली बार में सही काम करने की प्रतिबद्धता के साथ किया जाता है।', bookService: 'सर्विस बुक करें', ask: 'व्हाट्सऐप पूछें', vehicles: 'सर्विस की गई कारें', issues: 'हल की गई समस्याएँ', models: 'सर्विस किए गए मॉडल', years: 'वर्षों का अनुभव', what: 'हम क्या करते हैं', one: 'एक वर्कशॉप।', every: 'हर समाधान।', aboutLabel: 'संस्थापक से मिलिए', meet: 'अगली सर्विस के लिए मिलिए' },
+  mr: { services: 'सेवा', about: 'आमच्याबद्दल', diagnose: 'तपासणी', why: 'अम्बा का?', gallery: 'गॅलरी', contact: 'संपर्क', call: 'कॉल करा', heroLabel: 'दिवाळी विशेष · उजळू द्या तुमचा प्रवास', heroTitle: 'कार सर्व्हिस आणि रिपेअर', heroTitleAccent: 'अमरावतीमध्ये.', heroText: 'अमरावतीमध्ये कार गॅरेज शोधत आहात? अम्बा मोटर्स, बडनेरा रोड येथे कार सर्व्हिसिंग, डायग्नोस्टिक्स, ब्रेक व एसी रिपेअर, व्हील अलाइनमेंट, डेंटिंग आणि पेंटिंग.', book: 'व्हॉट्सॲपवर बुक करा', explore: 'सेवा पहा', proof: 'विश्वासाचा', proofAccent: 'पुरावा.', proofText: 'प्रत्येक काम अनुभव, काळजीपूर्वक तपासणी आणि पहिल्याच वेळी योग्य काम करण्याच्या वचनबद्धतेने केले जाते.', bookService: 'सेवा बुक करा', ask: 'व्हॉट्सॲप विचारा', vehicles: 'सर्व्हिस केलेल्या कार', issues: 'सोडवलेल्या समस्या', models: 'सर्व्हिस केलेले मॉडेल', years: 'वर्षांचा अनुभव', what: 'आम्ही काय करतो', one: 'एक वर्कशॉप.', every: 'प्रत्येक उपाय.', aboutLabel: 'संस्थापकाला भेटा', meet: 'पुढील सर्व्हिससाठी भेटा' },
 } as const
 const siteTranslations: Record<Exclude<Language, 'en'>, Record<string, string>> = {
   hi: {
@@ -139,66 +140,10 @@ const gallery = [
   { src: assets.feature, alt: 'Amba Motors service bay', label: 'Built for every car' },
   { src: assets.collage, alt: 'Amba Motors technicians and paint booth', label: 'Crafted with care' },
   { src: assets.interior, alt: 'Amba Motors reception and service tools', label: 'A clear process' },
-  { src: '/images/amba-navratri-poster.png', alt: 'Amba Motors Navratri poster with Maa Durga, the workshop and safe journey wishes', label: 'Safe rides, happy vibes' },
-  { src: '/images/navratri-ambe-cover.png', alt: 'Colorful festive portrait celebrating Maa Ambe', label: 'Maa Ambe’s blessings' },
-  { src: '/images/happy-navratri-eyes.png', alt: 'Festive Happy Navratri greeting artwork', label: 'Happy Navratri' },
-  { src: '/images/durga-blessings.png', alt: 'Maa Durga blessing devotees for Navratri', label: 'Blessings for every journey' },
-  { src: '/images/navratri-durga-art.png', alt: 'Traditional red and gold Maa Durga artwork', label: 'A season of celebration' },
 ]
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return <p className="eyebrow"><Asterisk size={14} /> {children}</p>
-}
-
-function SignatureCursor() {
-  const cursorRef = useRef<HTMLDivElement>(null)
-  const ringRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const finePointer = window.matchMedia('(pointer: fine)')
-    if (!finePointer.matches) return
-    const cursor = cursorRef.current
-    const ring = ringRef.current
-    if (!cursor || !ring) return
-    let frame = 0
-    let x = -40
-    let y = -40
-    let ringX = x
-    let ringY = y
-    const move = (event: MouseEvent) => {
-      x = event.clientX
-      y = event.clientY
-      cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`
-      cancelAnimationFrame(frame)
-      const animate = () => {
-        ringX += (x - ringX) * 0.16
-        ringY += (y - ringY) * 0.16
-        ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`
-        frame = requestAnimationFrame(animate)
-      }
-      frame = requestAnimationFrame(animate)
-    }
-    const setHover = (event: Event) => {
-      const target = event.currentTarget as HTMLElement
-      ring.classList.toggle('cursor-hover', target.matches('a, button, input, select, textarea, label'))
-    }
-    const interactive = Array.from(document.querySelectorAll('a, button, input, select, textarea, label'))
-    window.addEventListener('mousemove', move)
-    interactive.forEach((element) => {
-      element.addEventListener('mouseenter', setHover)
-      element.addEventListener('mouseleave', setHover)
-    })
-    return () => {
-      window.removeEventListener('mousemove', move)
-      cancelAnimationFrame(frame)
-      interactive.forEach((element) => {
-        element.removeEventListener('mouseenter', setHover)
-        element.removeEventListener('mouseleave', setHover)
-      })
-    }
-  }, [])
-
-  return <><div ref={ringRef} className="signature-cursor-ring" aria-hidden="true" /><div ref={cursorRef} className="signature-cursor-core" aria-hidden="true" /></>
 }
 
 export default function Page() {
@@ -230,8 +175,30 @@ export default function Page() {
 
   const t = copy[language]
   useEffect(() => {
-    const timer = window.setTimeout(() => setShowWelcome(false), 3600)
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setShowWelcome(false)
+      return
+    }
+    const timer = window.setTimeout(() => setShowWelcome(false), 2400)
     return () => window.clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    const hero = document.querySelector('.hero')
+    if (!hero) return
+    const syncHeroVisibility = () => {
+      const bounds = hero.getBoundingClientRect()
+      const heroVisible = bounds.bottom > 0 && bounds.top < window.innerHeight
+      document.body.classList.toggle('mobile-hero-visible', window.matchMedia('(max-width: 800px)').matches && heroVisible)
+    }
+    const observer = new IntersectionObserver(syncHeroVisibility)
+    observer.observe(hero)
+    window.addEventListener('resize', syncHeroVisibility)
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', syncHeroVisibility)
+      document.body.classList.remove('mobile-hero-visible')
+    }
   }, [])
 
   useEffect(() => {
@@ -400,26 +367,15 @@ export default function Page() {
 
   return (
     <Localized language={language}>
-    <SignatureCursor />
-    {showWelcome && <div className="welcome-splash" role="status" aria-label="Happy Navratri from Amba Motors">
-      <div className="welcome-garland welcome-garland-left" aria-hidden="true">✦ ✧ ✦</div>
-      <div className="welcome-garland welcome-garland-right" aria-hidden="true">✦ ✧ ✦</div>
-      <div className="welcome-scene">
-        <div className="welcome-side-art welcome-side-left">
-          <figure><Image src="/images/navratri-ambe-cover.png" alt="" fill sizes="(max-width: 800px) 24vw, 15vw" /></figure>
-          <figure><Image src="/images/happy-navratri-eyes.png" alt="" fill sizes="(max-width: 800px) 24vw, 15vw" /></figure>
-        </div>
-        <div className="welcome-center">
-          <p className="welcome-kicker">Amba Motors wishes you</p>
-          <h2>Happy <em>Navratri</em></h2>
-          <div className="welcome-poster-frame"><Image src="/images/amba-navratri-poster.png" alt="Maa Durga blesses Amba Motors customers with safe rides and happy vibes this Navratri" fill priority sizes="(max-width: 800px) 60vw, 34vw" /></div>
-          <span className="welcome-blessing">माँ दुर्गा का आशीर्वाद · Blessed journeys ahead</span>
-        </div>
-        <div className="welcome-side-art welcome-side-right">
-          <figure><Image src="/images/durga-blessings.png" alt="" fill sizes="(max-width: 800px) 24vw, 15vw" /></figure>
-          <figure><Image src="/images/navratri-durga-art.png" alt="" fill sizes="(max-width: 800px) 24vw, 15vw" /></figure>
-        </div>
-      </div>
+    <DiwaliAtmosphere />
+    {showWelcome && <div className="welcome-splash" role="status" aria-label="Diwali greetings from Amba Motors">
+      <span className="diwali-splash-kicker">AMBA MOTORS · AMRAVATI</span>
+      <div className="diwali-splash-diyas" aria-hidden="true"><span className="diwali-diya"><i /></span><span className="diwali-diya"><i /></span><span className="diwali-diya"><i /></span></div>
+      <p className="welcome-kicker">Wishing you a bright, safe &amp; prosperous</p>
+      <h2>Happy <em>Diwali</em></h2>
+      <p className="welcome-blessing">May every road ahead shine a little brighter.</p>
+      <button className="diwali-splash-button" type="button" onClick={() => { celebrateDiwali(); setShowWelcome(false) }}>Celebrate with us <Sparkles size={16} /></button>
+      <button className="diwali-splash-skip" type="button" onClick={() => setShowWelcome(false)}>Skip</button>
     </div>}
     <main>
       <CarDoctor />
@@ -437,22 +393,27 @@ export default function Page() {
       </header>
       {menuOpen && <nav className="mobile-nav"><a href="#services" onClick={() => setMenuOpen(false)}>{t.services}</a><a href="#about" onClick={() => setMenuOpen(false)}>{t.about}</a><a href="#why-us" onClick={() => setMenuOpen(false)}>{t.why}</a><a href="#gallery" onClick={() => setMenuOpen(false)}>{t.gallery}</a><a href="#contact" onClick={() => setMenuOpen(false)}>{t.contact}</a><div className="mobile-language-picker"><Globe2 size={15} /> <select value={language} onChange={event => setLanguage(event.target.value as Language)} aria-label="Choose language"><option value="en">{languages.en}</option><option value="hi">{languages.hi}</option><option value="mr">{languages.mr}</option></select></div></nav>}
 
-      <section className="hero" id="top">
+      <section className="hero" id="top" onClick={event => {
+        if (event.target instanceof Element && !event.target.closest('a, button, input, select, textarea, label')) {
+          celebrateDiwali(event.clientX, event.clientY)
+        }
+      }}>
         <div className="hero-copy reveal">
           <SectionLabel>{t.heroLabel}</SectionLabel>
           <h1>{t.heroTitle}<br /><em>{t.heroTitleAccent}</em></h1>
+          <p className="diwali-hero-greeting">Light Up Your Journey <span>This Diwali!</span></p>
+          <p className="diwali-supporting-copy">Celebrate the festival of lights with safe, reliable and professional automotive care from Amba Motors.</p>
           <p className="hero-lede">{t.heroText}</p>
+          <button className="diwali-special-badge" type="button" onClick={() => celebrateDiwali()}><Sparkles size={14} /> DIWALI SPECIAL · AMBA MOTORS <Sparkles size={14} /></button>
           <div className="hero-actions"><a className="button button-red" href={whatsapp()} target="_blank" rel="noreferrer"><MessageCircle size={18} /> {t.book}</a><a className="text-link" href="#services">{t.explore} <ArrowRight size={16} /></a></div>
           <div className="hero-proof"><span><Star size={15} fill="currentColor" /> 4.6 Google rating</span><span><ShieldCheck size={15} /> All types of cars</span></div>
         </div>
-        <div className="hero-image-wrap" aria-label="Navratri greetings and artwork from Amba Motors">
-          <div className="navratri-photo-grid">
-            <figure className="navratri-photo navratri-photo-cover"><Image src="/images/durga-navratri.png" alt="Maa Durga seated with her lion for Navratri" fill priority sizes="(max-width: 800px) 46vw, 28vw" /><figcaption>Maa Ambe’s grace</figcaption></figure>
-            <figure className="navratri-photo navratri-photo-eyes"><Image src="/images/happy-navratri-eyes.png" alt="Happy Navratri greeting with Maa Durga’s eyes" fill sizes="(max-width: 800px) 46vw, 28vw" /><figcaption>Happy Navratri</figcaption></figure>
-            <figure className="navratri-photo navratri-photo-blessings"><Image src="/images/durga-blessings.png" alt="Maa Durga’s blessing for Navratri" fill sizes="(max-width: 800px) 46vw, 28vw" /><figcaption>Blessings for every journey</figcaption></figure>
-            <figure className="navratri-photo navratri-photo-art"><Image src="/images/amba-navratri-poster.png" alt="Amba Motors Navratri greetings for safe rides and happy vibes" fill sizes="(max-width: 800px) 46vw, 28vw" /><figcaption>Safe rides, happy vibes</figcaption></figure>
-          </div>
-          <div className="image-caption"><span>शुभ नवरात्रि</span><span>Safe journeys, blessed beginnings</span></div>
+        <div className="hero-image-wrap" aria-label="Amba Motors workshop, ready for every journey">
+          <Image className="hero-image" src={assets.exterior} alt="The Amba Motors workshop in Amravati, ready to care for your car this Diwali" fill priority sizes="(max-width: 800px) 100vw, 48vw" />
+          <div className="hero-image-shade" aria-hidden="true" />
+          <div className="diwali-diya diwali-diya-hero" aria-hidden="true"><i /></div>
+          <div className="image-caption"><span>शुभ दीपावली</span><span>Safe journeys, brighter beginnings</span></div>
+          <figure className="hero-workshop-card"><Image className="hero-workshop-image" src={assets.feature} alt="A technician providing careful vehicle service at Amba Motors" fill sizes="(max-width: 800px) 42vw, 20vw" /><span>CARE FOR EVERY JOURNEY<small>Professional service · Amravati</small></span></figure>
         </div>
       </section>
 
@@ -498,7 +459,7 @@ export default function Page() {
 
       <section className="map-section"><div className="map-card"><div className="map-grid"><MapPin size={42} /><div><SectionLabel>Find us in Amravati</SectionLabel><h2>Come by.<br /><span>We’re ready.</span></h2><p>WP2X+VHJ, No 1, Ram Vattika Hareeiali, Badnera Rd, Sharda Vihar, Amravati.</p><a className="button button-red" href={mapLink} target="_blank" rel="noreferrer">Open in Google Maps <ArrowRight size={17} /></a></div></div><div className="map-lines" aria-hidden="true"><span /><span /><span /><span /><div className="map-pin"><MapPin size={20} /></div></div></div></section>
 
-      <footer className="footer"><div className="footer-top"><a href="#top" className="brand"><span className="brand-mark"><Wrench size={18} /></span><span><strong>AMBA</strong><small>MOTORS</small></span></a><p>Your car, our care.<br />Reliable service for every road ahead.</p><div className="socials"><a href="#contact" aria-label="Website"><Globe2 size={18} /></a><a href="#contact" aria-label="Location"><MapPin size={18} /></a><a href={whatsapp()} aria-label="WhatsApp"><MessageCircle size={18} /></a></div></div><div className="footer-bottom"><span>© 2026 Amba Motors</span><span>Amravati, Maharashtra</span><span>Built on trust.</span></div></footer>
+      <footer className="footer"><div className="diwali-footer-greeting"><button className="diwali-footer-diyas" type="button" onClick={() => celebrateDiwali()} aria-label="Light a diya and celebrate Diwali"><span className="diwali-diya"><i /></span><span className="diwali-diya"><i /></span><span className="diwali-diya"><i /></span></button><p>Wishing You a Bright, Safe &amp; Prosperous Diwali!</p><button type="button" onClick={() => celebrateDiwali()} aria-label="Celebrate Diwali with fireworks"><Sparkles size={16} /> Celebrate</button></div><div className="footer-top"><a href="#top" className="brand"><span className="brand-mark"><Wrench size={18} /></span><span><strong>AMBA</strong><small>MOTORS</small></span></a><p>Your car, our care.<br />Reliable service for every road ahead.</p><div className="socials"><a href="#contact" aria-label="Website"><Globe2 size={18} /></a><a href="#contact" aria-label="Location"><MapPin size={18} /></a><a href={whatsapp()} aria-label="WhatsApp"><MessageCircle size={18} /></a></div></div><div className="footer-bottom"><span>© 2026 Amba Motors</span><span>Amravati, Maharashtra</span><span>Built on trust.</span></div></footer>
       <a className="floating-wa" href={whatsapp()} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><MessageCircle size={23} /></a>
       <div className="mobile-actions"><a href={`tel:${phone}`}><Phone size={17} /> Call</a><a href={whatsapp()} target="_blank" rel="noreferrer"><MessageCircle size={17} /> WhatsApp</a></div>
 

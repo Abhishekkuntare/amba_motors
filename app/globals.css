@@ -201,26 +201,26 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 :root {
   color-scheme: dark;
-  --background: #110b16;
-  --foreground: #fff4df;
-  --card: #211522;
-  --card-foreground: #fff4df;
-  --primary: #ffb629;
+  --background: #080d18;
+  --foreground: #fff3dc;
+  --card: #111a2b;
+  --card-foreground: #fff3dc;
+  --primary: #f3bd55;
   --primary-foreground: #24110c;
-  --muted: #2d1c2a;
-  --muted-foreground: #d0bba8;
-  --border: #563747;
-  --ring: #ffb629;
-  --red: #ef4a38;
-  --steel: #cfb798;
-  --dark: #110b16;
+  --muted: #1b2537;
+  --muted-foreground: #d4c8ad;
+  --border: #3c3a34;
+  --ring: #f3bd55;
+  --red: #e56748;
+  --steel: #c9b993;
+  --dark: #080d18;
   --green: #87b75b;
-  --ink-strong: #fff4df;
-  --ink-soft: #ddcbb7;
-  --ink-faint: #c4a98b;
-  --cream: #fff4df;
-  --sand: #ffb629;
-  --line-strong: #70503a;
+  --ink-strong: #fff3dc;
+  --ink-soft: #c7c7cb;
+  --ink-faint: #c4b38e;
+  --cream: #fff3dc;
+  --sand: #f3bd55;
+  --line-strong: #62523a;
 }
 
 html { background: var(--background); }
@@ -292,7 +292,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
     radial-gradient(ellipse at 76% 48%, rgba(146, 48, 47, .21), transparent 46%),
     radial-gradient(ellipse at 16% 100%, rgba(255, 182, 41, .08), transparent 42%);
 }
-.hero-copy { max-width: 610px; animation: navratri-rise .8s both; }
+.hero-copy { max-width: 610px; animation: diwali-rise .8s both; }
 .hero-copy h1 { max-width: 660px; margin-bottom: 24px; }
 .hero .hero-copy h1 { font-size: clamp(54px, 5.8vw, 82px); }
 .hero-copy h1 em { color: var(--primary); }
@@ -327,7 +327,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   min-height: 540px;
   isolation: isolate;
   background: radial-gradient(ellipse at 50% 53%, rgba(255, 181, 40, .2), rgba(136, 40, 48, .1) 41%, transparent 72%);
-  animation: navratri-glow 5s ease-in-out infinite;
+  animation: diwali-glow 5s ease-in-out infinite;
 }
 .hero-image-wrap::before {
   z-index: -1;
@@ -339,7 +339,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   border-radius: 50%;
   box-shadow: 0 0 0 18px rgba(255, 194, 76, .035), 0 0 90px rgba(239, 74, 56, .2);
   transform: none;
-  animation: navratri-orbit 32s linear infinite;
+  animation: diwali-orbit 32s linear infinite;
 }
 .hero-image {
   object-fit: contain;
@@ -529,9 +529,9 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
 .job-status.active, .tool-success { color: var(--primary); }
 .job-status.active span { border-color: var(--primary); background: var(--primary); color: #24110c; }
 
-@keyframes navratri-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes navratri-glow { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.08); } }
-@keyframes navratri-orbit { to { transform: rotate(360deg); } }
+@keyframes diwali-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes diwali-glow { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.08); } }
+@keyframes diwali-orbit { to { transform: rotate(360deg); } }
 
 @media (max-width: 800px) {
   .site-header { height: 68px; }
@@ -587,7 +587,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   animation: none;
 }
 .hero-image-wrap::before { z-index: -1; }
-.navratri-photo-grid {
+.diwali-photo-grid {
   display: grid;
   min-height: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -595,7 +595,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   gap: clamp(9px, 1.5vw, 20px);
   padding: 12px;
 }
-.navratri-photo {
+.diwali-photo {
   position: relative;
   min-width: 0;
   min-height: 0;
@@ -606,13 +606,13 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   background: #24131f;
   box-shadow: 0 16px 40px rgba(0, 0, 0, .28), inset 0 0 0 1px rgba(255, 239, 205, .08);
   isolation: isolate;
-  animation: navratri-photo-arrive .8s both;
+  animation: diwali-photo-arrive .8s both;
   transition: border-color .35s ease, transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease;
 }
-.navratri-photo:nth-child(2) { animation-delay: .1s; }
-.navratri-photo:nth-child(3) { animation-delay: .2s; }
-.navratri-photo:nth-child(4) { animation-delay: .3s; }
-.navratri-photo::after {
+.diwali-photo:nth-child(2) { animation-delay: .1s; }
+.diwali-photo:nth-child(3) { animation-delay: .2s; }
+.diwali-photo:nth-child(4) { animation-delay: .3s; }
+.diwali-photo::after {
   position: absolute;
   z-index: 1;
   inset: 34% 0 0;
@@ -620,19 +620,19 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   content: '';
   pointer-events: none;
 }
-.navratri-photo img {
+.diwali-photo img {
   object-fit: cover;
   transition: transform .7s cubic-bezier(.2,.8,.2,1), filter .5s ease;
 }
-.navratri-photo-eyes img { object-position: center 36%; }
-.navratri-photo:hover {
+.diwali-photo-eyes img { object-position: center 36%; }
+.diwali-photo:hover {
   z-index: 2;
   border-color: #ffda83;
   box-shadow: 0 22px 48px rgba(0, 0, 0, .45), 0 0 28px rgba(255, 182, 41, .2);
   transform: translateY(-5px) scale(1.02);
 }
-.navratri-photo:hover img { filter: saturate(1.12) brightness(1.06); transform: scale(1.07); }
-.navratri-photo figcaption {
+.diwali-photo:hover img { filter: saturate(1.12) brightness(1.06); transform: scale(1.07); }
+.diwali-photo figcaption {
   position: absolute;
   z-index: 2;
   right: 12px;
@@ -698,7 +698,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
     radial-gradient(circle at 13% 84%, rgba(184, 30, 49, .24), transparent 28%),
     radial-gradient(circle at 88% 15%, rgba(255, 187, 43, .16), transparent 25%),
     #110b16;
-  animation: navratri-splash-out .65s ease 3.05s both;
+  animation: diwali-splash-out .65s ease 3.05s both;
 }
 .welcome-splash::before, .welcome-splash::after {
   position: absolute;
@@ -712,8 +712,8 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   content: '';
   pointer-events: none;
 }
-.welcome-splash::before { animation: navratri-sparkle-drift 15s linear infinite; }
-.welcome-splash::after { opacity: .45; animation: navratri-sparkle-drift 21s linear infinite reverse; }
+.welcome-splash::before { animation: diwali-sparkle-drift 15s linear infinite; }
+.welcome-splash::after { opacity: .45; animation: diwali-sparkle-drift 21s linear infinite reverse; }
 .welcome-scene {
   position: relative;
   z-index: 1;
@@ -731,7 +731,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   font: 700 clamp(9px, 1.1vw, 13px)/1.3 var(--font-body), sans-serif;
   letter-spacing: .2em;
   text-transform: uppercase;
-  animation: navratri-greeting-in .7s .12s both;
+  animation: diwali-greeting-in .7s .12s both;
 }
 .welcome-splash h1, .welcome-splash h2 {
   margin: 0 0 12px;
@@ -739,7 +739,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   font: 600 clamp(31px, 4.7vw, 62px)/1.05 var(--font-accent), Georgia, serif;
   letter-spacing: -.04em;
   text-transform: none;
-  animation: navratri-greeting-in .7s .24s both;
+  animation: diwali-greeting-in .7s .24s both;
 }
 .welcome-splash h1 em, .welcome-splash h2 em { color: #ffc84c; font-style: italic; }
 .welcome-poster-frame {
@@ -752,7 +752,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   border-radius: 16px;
   background: #1b1018;
   box-shadow: 0 24px 80px rgba(0, 0, 0, .62), 0 0 55px rgba(255, 170, 43, .22);
-  animation: navratri-poster-in .9s .16s cubic-bezier(.2,.8,.2,1) both, navratri-poster-glow 3.5s ease-in-out infinite;
+  animation: diwali-poster-in .9s .16s cubic-bezier(.2,.8,.2,1) both, diwali-poster-glow 3.5s ease-in-out infinite;
 }
 .welcome-poster-frame img { object-fit: cover; }
 .welcome-blessing {
@@ -760,7 +760,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   color: #f3d5aa;
   font: 500 clamp(9px, 1vw, 12px)/1.4 var(--font-body), sans-serif;
   letter-spacing: .07em;
-  animation: navratri-greeting-in .7s .45s both;
+  animation: diwali-greeting-in .7s .45s both;
 }
 .welcome-side-art { display: grid; width: 100%; gap: clamp(10px, 2vw, 22px); }
 .welcome-side-art figure {
@@ -773,7 +773,7 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   border-radius: 16px;
   background: #24131f;
   box-shadow: 0 16px 42px rgba(0, 0, 0, .36);
-  animation: navratri-side-in .8s both, navratri-side-float 4.8s ease-in-out infinite;
+  animation: diwali-side-in .8s both, diwali-side-float 4.8s ease-in-out infinite;
   transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
 }
 .welcome-side-art figure:nth-child(2) { animation-delay: .18s, .7s; }
@@ -790,20 +790,20 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   letter-spacing: .42em;
   opacity: .8;
   text-shadow: 0 0 25px rgba(255, 174, 42, .7);
-  animation: navratri-garland-sway 3s ease-in-out infinite;
+  animation: diwali-garland-sway 3s ease-in-out infinite;
 }
 .welcome-garland-left { left: 3%; transform-origin: top left; }
 .welcome-garland-right { right: 3%; transform-origin: top right; animation-delay: .6s; }
 
-@keyframes navratri-splash-out { to { opacity: 0; visibility: hidden; } }
-@keyframes navratri-sparkle-drift { to { transform: translate3d(5%, -4%, 0) rotate(12deg); } }
-@keyframes navratri-greeting-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes navratri-poster-in { from { opacity: 0; transform: translateY(23px) scale(.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
-@keyframes navratri-poster-glow { 0%, 100% { box-shadow: 0 24px 80px rgba(0, 0, 0, .62), 0 0 40px rgba(255, 170, 43, .18); } 50% { box-shadow: 0 24px 80px rgba(0, 0, 0, .62), 0 0 68px rgba(255, 170, 43, .36); } }
-@keyframes navratri-side-in { from { opacity: 0; transform: translateY(18px) rotate(-2deg); } to { opacity: 1; transform: translateY(0) rotate(0); } }
-@keyframes navratri-side-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
-@keyframes navratri-garland-sway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
-@keyframes navratri-photo-arrive { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes diwali-splash-out { to { opacity: 0; visibility: hidden; } }
+@keyframes diwali-sparkle-drift { to { transform: translate3d(5%, -4%, 0) rotate(12deg); } }
+@keyframes diwali-greeting-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes diwali-poster-in { from { opacity: 0; transform: translateY(23px) scale(.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes diwali-poster-glow { 0%, 100% { box-shadow: 0 24px 80px rgba(0, 0, 0, .62), 0 0 40px rgba(255, 170, 43, .18); } 50% { box-shadow: 0 24px 80px rgba(0, 0, 0, .62), 0 0 68px rgba(255, 170, 43, .36); } }
+@keyframes diwali-side-in { from { opacity: 0; transform: translateY(18px) rotate(-2deg); } to { opacity: 1; transform: translateY(0) rotate(0); } }
+@keyframes diwali-side-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+@keyframes diwali-garland-sway { 0%, 100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+@keyframes diwali-photo-arrive { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
 @media (max-width: 800px) {
   .hero-image-wrap {
@@ -812,9 +812,9 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
     border-radius: 0;
     background: transparent;
   }
-  .navratri-photo-grid { gap: 10px; padding: 9px; }
-  .navratri-photo { border-radius: 17px; }
-  .navratri-photo figcaption { right: 8px; bottom: 9px; left: 8px; font-size: 13px; }
+  .diwali-photo-grid { gap: 10px; padding: 9px; }
+  .diwali-photo { border-radius: 17px; }
+  .diwali-photo figcaption { right: 8px; bottom: 9px; left: 8px; font-size: 13px; }
   .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: clamp(160px, 47vw, 250px); gap: 9px; }
   .gallery-item span { padding: 7px 9px; font-size: 12px; }
   .welcome-splash { padding: 18px 12px; }
@@ -830,15 +830,256 @@ h1 em, h2 span { color: var(--primary); font-style: italic; }
   .welcome-blessing { max-width: 215px; margin-top: 8px; font-size: 8px; line-height: 1.5; letter-spacing: .02em; }
 }
 @media (max-width: 420px) {
-  .navratri-photo-grid { gap: 7px; padding: 6px; }
-  .navratri-photo { border-radius: 13px; }
-  .navratri-photo figcaption { font-size: 11px; }
+  .diwali-photo-grid { gap: 7px; padding: 6px; }
+  .diwali-photo { border-radius: 13px; }
+  .diwali-photo figcaption { font-size: 11px; }
   .welcome-scene { grid-template-columns: minmax(0, .68fr) minmax(0, 2.3fr) minmax(0, .68fr); gap: 4px; }
   .welcome-poster-frame { width: min(100%, 46vw); max-height: 51svh; }
   .welcome-side-art figure { aspect-ratio: 2 / 3; border-radius: 7px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .welcome-splash { animation: navratri-splash-out .01ms ease 3.59s both; }
-  .welcome-splash::before, .welcome-splash::after, .welcome-garland, .welcome-poster-frame, .welcome-side-art figure, .welcome-splash h1, .welcome-splash h2, .welcome-kicker, .welcome-blessing, .navratri-photo { animation: none; }
-  .navratri-photo, .navratri-photo img, .gallery-item, .gallery-item img, .welcome-side-art figure, .welcome-side-art img { transition: none; }
+  .welcome-splash { animation: diwali-splash-out .01ms ease 3.59s both; }
+  .welcome-splash::before, .welcome-splash::after, .welcome-garland, .welcome-poster-frame, .welcome-side-art figure, .welcome-splash h1, .welcome-splash h2, .welcome-kicker, .welcome-blessing, .diwali-photo { animation: none; }
+  .diwali-photo, .diwali-photo img, .gallery-item, .gallery-item img, .welcome-side-art figure, .welcome-side-art img { transition: none; }
+}
+
+.site-header {
+  position: relative;
+  border-color: rgba(243, 189, 85, .2);
+  background: rgba(8, 13, 24, .88);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .16);
+}
+.site-header::after { position: absolute; right: 6%; bottom: -3px; left: 6%; height: 12px; background: radial-gradient(circle at 8px 0, #dfa94c 0 2px, transparent 3px) 0 0 / 24px 12px repeat-x; content: ''; opacity: .7; pointer-events: none; }
+.brand-mark { border: 1px solid rgba(243, 189, 85, .65); background: rgba(243, 189, 85, .08); color: var(--primary); }
+.brand small { color: #c6b58f; }
+.desktop-nav { color: #d5d2cb; }
+.desktop-nav a { position: relative; transition: color .2s ease; }
+.desktop-nav a::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 1px; background: var(--primary); content: ''; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.desktop-nav a:hover { color: var(--primary); }
+.desktop-nav a:hover::after { transform: scaleX(1); }
+.language-picker { border-color: rgba(243, 189, 85, .24); background: rgba(255, 255, 255, .035); color: var(--foreground); }
+.header-call { border-color: rgba(243, 189, 85, .25); color: var(--foreground); }
+.header-call svg { color: var(--primary); }
+.hero { background: radial-gradient(ellipse at 82% 50%, rgba(216, 112, 40, .1), transparent 44%), radial-gradient(ellipse at 12% 100%, rgba(243, 189, 85, .07), transparent 44%); }
+.hero h1 { color: var(--foreground); }
+.hero-copy h1 em, h2 span { color: var(--primary); }
+.hero-lede, .section-heading > p, .trust-metrics-intro > p { color: var(--ink-soft); }
+.ticker { border-color: rgba(243, 189, 85, .2); background: linear-gradient(90deg, #171b25, #392518 50%, #171b25); color: #f4d28a; }
+.ticker span::before { color: var(--primary); }
+.trust-metrics { border-color: rgba(243, 189, 85, .2); background: linear-gradient(125deg, #101827, #121a27 62%, #21191b); }
+.metric-card { border-color: rgba(243, 189, 85, .2); }
+.service-card, .catalog-card, .article-card, .review-card, .tool-card, .live-card, .profile-card, .upload-card, .voice-card {
+  border-color: rgba(243, 189, 85, .2);
+  background: linear-gradient(145deg, #121c2d, #0d1421);
+}
+.service-card:hover, .catalog-card:hover, .article-card:hover, .review-card:hover, .tool-card:hover, .live-card:hover {
+  border-color: rgba(243, 189, 85, .65);
+  background: linear-gradient(145deg, #1a2639, #111a2b);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .26), 0 0 26px rgba(243, 189, 85, .08);
+}
+.about-section, .split-feature, .contact-section { border-color: rgba(243, 189, 85, .18); background: linear-gradient(110deg, #101827, #0b111d 70%); }
+.emergency-section { border-color: rgba(243, 189, 85, .22); background: radial-gradient(ellipse at 85% 50%, rgba(197, 67, 45, .16), transparent 45%), #101827; }
+.symptom, .symptom-result, .map-card, .enquiry-form { border-color: rgba(243, 189, 85, .18); background: #101827; }
+.symptom:hover, .symptom.active { background: #1b2537; }
+.map-card { background: linear-gradient(120deg, #151e2f, #0e1522); }
+.footer { border-color: rgba(243, 189, 85, .22); background: #060a12; }
+.footer-top p, .footer-bottom { border-color: rgba(243, 189, 85, .16); }
+.footer .brand strong { color: var(--foreground); }
+.footer .brand small { color: #d2b776; }
+.mobile-nav { border-color: rgba(243, 189, 85, .22); background: #0e1522; }
+
+.diwali-fireworks {
+  position: fixed;
+  z-index: 12;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.diwali-fairy-lights {
+  position: fixed;
+  z-index: 22;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 13px;
+  justify-content: space-around;
+  pointer-events: none;
+}
+.diwali-fairy-lights::before {
+  position: absolute;
+  top: -9px;
+  right: -2%;
+  left: -2%;
+  height: 21px;
+  border-bottom: 1px solid rgba(243, 189, 85, .5);
+  border-radius: 0 0 50% 50%;
+  content: '';
+}
+.diwali-fairy-lights span {
+  position: relative;
+  width: 6px;
+  height: 7px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: #ffd77d;
+  box-shadow: 0 0 7px 2px rgba(255, 190, 73, .8);
+  animation: diwali-twinkle 2.4s ease-in-out infinite alternate;
+}
+.diwali-fairy-lights span:nth-child(3n) { animation-delay: -.8s; }
+.diwali-fairy-lights span:nth-child(3n + 1) { animation-delay: -1.6s; }
+.diwali-kandils { position: fixed; z-index: 21; inset: 68px 0 auto; display: flex; justify-content: space-between; padding-inline: 25px; pointer-events: none; }
+.diwali-kandil {
+  position: relative;
+  width: 34px;
+  height: 54px;
+  border: 1px solid rgba(255, 211, 121, .8);
+  border-radius: 10px 10px 8px 8px;
+  background: repeating-linear-gradient(45deg, rgba(226, 95, 55, .88) 0 7px, rgba(255, 196, 74, .94) 7px 14px);
+  box-shadow: 0 0 18px rgba(246, 165, 59, .25), inset 0 0 14px rgba(255, 232, 161, .5);
+  animation: diwali-lantern-sway 4.5s ease-in-out infinite;
+}
+.diwali-kandil::before { position: absolute; top: -68px; left: 50%; width: 1px; height: 68px; background: rgba(255, 211, 121, .62); content: ''; }
+.diwali-kandil::after { position: absolute; bottom: -10px; left: 50%; width: 1px; height: 10px; background: #e7ab4b; box-shadow: -4px 4px 0 -0.2px #e7ab4b, 4px 4px 0 -0.2px #e7ab4b; content: ''; }
+.diwali-kandil i { position: absolute; inset: 13px 10px; border-radius: 50%; background: #fff0ab; box-shadow: 0 0 16px 8px rgba(255, 185, 71, .6); }
+.diwali-kandil { pointer-events: auto; transition: filter .2s ease, box-shadow .2s ease; }
+.diwali-kandil:hover { filter: brightness(1.35); box-shadow: 0 0 26px rgba(246, 165, 59, .5), inset 0 0 18px rgba(255, 239, 177, .72); }
+.diwali-kandil-right { animation-delay: -2.2s; transform: scale(.82); }
+.diwali-diya {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 15px;
+  border-radius: 3px 3px 20px 20px;
+  background: linear-gradient(180deg, #e59a43, #9e4c29);
+  box-shadow: inset 0 2px 3px rgba(255, 227, 155, .6), 0 4px 12px rgba(232, 132, 50, .28);
+}
+.diwali-diya::before { position: absolute; top: -2px; left: -2px; width: 38px; height: 4px; border-radius: 50%; background: #ffcc70; content: ''; }
+.diwali-diya i { position: absolute; bottom: 13px; left: 14px; width: 8px; height: 14px; border-radius: 80% 10% 70% 20%; background: #fff4be; box-shadow: 0 0 12px 5px rgba(255, 188, 69, .65); transform: rotate(12deg); animation: diwali-flame 1.2s ease-in-out infinite alternate; }
+.hero-image-wrap {
+  position: relative;
+  min-width: 0;
+  isolation: isolate;
+  overflow: visible;
+  border: 1px solid rgba(243, 189, 85, .42);
+  border-radius: 28px;
+  background: #101827;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, .32), 0 0 40px rgba(243, 189, 85, .07);
+}
+.hero-image-wrap::before { z-index: 2; inset: 14px; width: auto; height: auto; border: 1px solid rgba(255, 237, 197, .2); border-radius: 19px; box-shadow: none; animation: none; pointer-events: none; }
+.hero-image-wrap .hero-image { object-fit: cover; object-position: center; border-radius: 27px; filter: saturate(.82) brightness(.77); }
+.hero-image-shade { position: absolute; z-index: 1; inset: 0; border-radius: inherit; background: linear-gradient(180deg, rgba(8, 13, 24, .06) 38%, rgba(8, 13, 24, .76)), linear-gradient(120deg, rgba(239, 177, 80, .1), transparent 54%); pointer-events: none; }
+.diwali-diya-hero { position: absolute; z-index: 3; bottom: 48px; left: 28px; filter: drop-shadow(0 0 15px rgba(255, 185, 71, .4)); }
+.image-caption { z-index: 3; bottom: 22px; left: 78px; color: #f5e4bd; }
+.image-caption span:first-child { color: #f4c35d; }
+.hero-workshop-card { z-index: 4; right: 3%; bottom: -20px; width: 39%; aspect-ratio: 16 / 10; border: 1px solid rgba(243, 189, 85, .72); border-radius: 18px; background: #111a2b; box-shadow: 0 18px 42px rgba(0, 0, 0, .45); }
+.hero-workshop-card > span { padding: 22px 12px 10px; color: #fff0cc; font-size: 9px; }
+.hero-workshop-card small { color: #f1c45f; }
+.diwali-hero-greeting { margin: 0 0 8px; color: #fff0ca; font: 600 clamp(24px, 2.8vw, 36px)/1.1 var(--font-accent), Georgia, serif; letter-spacing: -.025em; }
+.diwali-hero-greeting span { color: var(--primary); font-style: italic; }
+.diwali-supporting-copy { max-width: 450px; margin: 0 0 10px; color: #d4c5a6; font-size: 13px; line-height: 1.6; }
+.diwali-special-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(243, 189, 85, .35);
+  border-radius: 999px;
+  padding: 9px 13px;
+  background: rgba(243, 189, 85, .08);
+  color: #f4d18a;
+  cursor: pointer;
+  font: 700 10px/1 var(--font-body), sans-serif;
+  letter-spacing: .12em;
+  transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.diwali-special-badge:hover { background: rgba(243, 189, 85, .15); box-shadow: 0 0 24px rgba(243, 189, 85, .16); transform: translateY(-2px); }
+.welcome-splash {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  overflow: hidden;
+  padding: 28px;
+  background: radial-gradient(ellipse at 50% 47%, rgba(167, 89, 39, .24), transparent 40%), radial-gradient(ellipse at 50% 120%, rgba(150, 41, 38, .2), transparent 50%), #080d18;
+  color: var(--foreground);
+  pointer-events: auto;
+  animation: diwali-splash-out .45s ease 1.95s both;
+}
+.welcome-splash::before, .welcome-splash::after { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255, 214, 125, .78) 0 1px, transparent 1.7px), radial-gradient(circle, rgba(255, 128, 62, .48) 0 1px, transparent 1.8px); background-size: 118px 127px, 173px 161px; background-position: 0 0, 45px 31px; content: ''; pointer-events: none; animation: diwali-sparkle-drift 18s linear infinite; }
+.welcome-splash::after { opacity: .4; animation-direction: reverse; animation-duration: 27s; }
+.diwali-splash-kicker, .welcome-kicker, .welcome-splash h2, .welcome-blessing, .diwali-splash-diyas, .diwali-splash-button, .diwali-splash-skip { position: relative; z-index: 1; }
+.diwali-splash-kicker { color: #d9c18e; font: 700 10px var(--font-body), sans-serif; letter-spacing: .25em; }
+.diwali-splash-diyas { display: flex; gap: 26px; align-items: end; padding: 17px 0 12px; }
+.diwali-splash-diyas .diwali-diya:nth-child(2) { transform: scale(1.3); }
+.welcome-kicker { margin: 0; color: #e8d8b7; font: 600 11px var(--font-body), sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.welcome-splash h2 { margin: 0; color: #fff4df; font: 600 clamp(54px, 10vw, 106px)/.95 var(--font-accent), Georgia, serif; letter-spacing: -.045em; }
+.welcome-splash h2 em { color: #f3bd55; font-style: italic; }
+.welcome-blessing { margin: 0; color: #d4c5a6; font: 500 14px var(--font-body), sans-serif; letter-spacing: .04em; text-align: center; }
+.diwali-splash-button, .diwali-footer-greeting button { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(243, 189, 85, .45); border-radius: 999px; padding: 11px 16px; background: rgba(243, 189, 85, .12); color: #ffe4a8; cursor: pointer; font: 700 11px var(--font-body), sans-serif; transition: background .2s ease, transform .2s ease; }
+.diwali-splash-button:hover, .diwali-footer-greeting button:hover { background: rgba(243, 189, 85, .22); transform: translateY(-2px); }
+.diwali-splash-skip { position: absolute; top: 24px; right: 28px; border: 0; background: transparent; color: #d4c5a6; cursor: pointer; font: 600 12px var(--font-body), sans-serif; }
+.diwali-footer-greeting { display: grid; justify-items: center; gap: 12px; padding: 28px 20px 24px; border-bottom: 1px solid rgba(243, 189, 85, .17); text-align: center; }
+.diwali-footer-greeting { position: relative; overflow: hidden; }
+.diwali-footer-greeting::before, .diwali-footer-greeting::after { position: absolute; top: 28px; width: 52px; aspect-ratio: 1; border: 1px solid rgba(243, 189, 85, .26); border-radius: 50%; background: repeating-conic-gradient(from 0deg, rgba(243, 189, 85, .18) 0deg 8deg, transparent 8deg 20deg); box-shadow: inset 0 0 0 6px rgba(243, 189, 85, .035), 0 0 24px rgba(243, 189, 85, .06); content: ''; pointer-events: none; }
+.diwali-footer-greeting::before { left: clamp(12px, 8vw, 110px); }
+.diwali-footer-greeting::after { right: clamp(12px, 8vw, 110px); }
+.diwali-footer-greeting p { margin: 0; color: #f3d795; font: 600 clamp(21px, 3vw, 31px)/1.2 var(--font-accent), Georgia, serif; }
+.diwali-footer-diyas { display: flex; align-items: end; gap: 18px; border: 0; padding: 8px; background: transparent; cursor: pointer; }
+.diwali-footer-diyas .diwali-diya:nth-child(2) { transform: scale(1.22); }
+.diwali-cursor { position: fixed; z-index: 110; top: 0; left: 0; visibility: hidden; color: #ffd472; filter: drop-shadow(0 0 7px rgba(255, 190, 73, .72)); pointer-events: none; transition: color .2s ease, filter .2s ease; }
+.diwali-cursor-rocket { display: block; transform: rotate(45deg); }
+.diwali-cursor-sparkle { display: none; }
+.diwali-cursor.is-interactive { color: #fff0bd; filter: drop-shadow(0 0 10px rgba(255, 205, 91, .95)); }
+.diwali-cursor.is-interactive .diwali-cursor-rocket { display: none; }
+.diwali-cursor.is-interactive .diwali-cursor-sparkle { display: block; }
+body.diwali-cursor-active, body.diwali-cursor-active * { cursor: none !important; }
+@keyframes diwali-twinkle { from { opacity: .46; filter: brightness(.8); } to { opacity: 1; filter: brightness(1.3); } }
+@keyframes diwali-lantern-sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+@keyframes diwali-flame { from { transform: rotate(8deg) scale(.93); } to { transform: rotate(-8deg) scale(1.08); } }
+@keyframes diwali-splash-out { to { opacity: 0; visibility: hidden; } }
+@keyframes diwali-sparkle-drift { to { transform: translate3d(4%, -3%, 0); } }
+@media (max-width: 800px) {
+  body.mobile-hero-visible .car-doctor-launch, body.mobile-hero-visible .floating-wa { visibility: hidden; opacity: 0; pointer-events: none; }
+  .diwali-fairy-lights { height: 9px; }
+  .diwali-fairy-lights span { width: 4px; height: 5px; }
+  .diwali-kandils { display: none; }
+  .hero { gap: 24px; }
+  .hero-image-wrap { height: min(78vw, 430px); min-height: 280px; overflow: hidden; border-radius: 23px; }
+  .hero-image-wrap::before { inset: 10px; border-radius: 16px; }
+  .hero-image-wrap .hero-image { border-radius: 22px; }
+  .hero-workshop-card { right: 2%; bottom: 14px; width: 43%; border-radius: 14px; }
+  .diwali-diya-hero { bottom: 23px; left: 19px; transform: scale(.83); transform-origin: bottom left; }
+  .image-caption { bottom: 14px; left: 60px; font-size: 8px; }
+  .image-caption span:first-child { font-size: 19px; }
+  .diwali-hero-greeting { font-size: 30px; }
+  .diwali-supporting-copy { max-width: 38rem; }
+}
+@media (max-width: 480px) {
+  .diwali-fairy-lights { justify-content: space-between; padding-inline: 10px; }
+  .diwali-fairy-lights span:nth-child(even) { display: none; }
+  .diwali-hero-greeting { font-size: 27px; }
+  .diwali-special-badge { gap: 6px; font-size: 9px; }
+  .welcome-splash { gap: 11px; padding: 20px; }
+  .welcome-splash h2 { font-size: clamp(52px, 15vw, 76px); }
+  .welcome-blessing { max-width: 280px; font-size: 12px; line-height: 1.55; }
+  .hero-image-wrap { height: 78vw; min-height: 250px; }
+  .hero-workshop-card { width: 46%; }
+  .hero-workshop-card > span { padding: 18px 8px 8px; font-size: 8px; letter-spacing: .07em; }
+  .hero-workshop-card small { font-size: 8px; }
+  .diwali-diya-hero { bottom: 17px; left: 12px; transform: scale(.68); }
+  .image-caption { bottom: 9px; left: 47px; font-size: 7px; }
+  .image-caption span:first-child { font-size: 16px; }
+  .diwali-footer-greeting { padding-inline: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .diwali-fairy-lights span, .diwali-kandil, .diwali-diya i, .welcome-splash::before, .welcome-splash::after { animation: none !important; }
+  .welcome-splash { animation-duration: .01ms; animation-delay: 0s; }
+  .diwali-cursor { display: none; }
+  .hero-copy, .hero-image-wrap, .hero-image-wrap::before { animation: none; }
+  .diwali-special-badge, .button, .service-card, .gallery-item, .gallery-item img { transition: none; }
 }
